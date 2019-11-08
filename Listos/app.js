@@ -30,17 +30,17 @@ button.on("click", function() {
     var dateInputText = d3.select("#datetime");
     var new_table1 = tableData.filter(info => moment(info.datetime).format('DD/MM/YYYY')===dateInputText.property("value"));
     displayData(new_table1);
-    var dateInputText = d3.select("#city");
-    var new_table2 = tableData.filter(info => info.city===dateInputText.property("value"));  
+    var dateInputText = d3.select("#branch");
+    var new_table2 = tableData.filter(info => info.branch===dateInputText.property("value"));  
     displayData(new_table2);
-    var dateInputText = d3.select("#state");
-    var new_table3 = tableData.filter(info => info.state===parseFloat(dateInputText.property("value")));
+    var dateInputText = d3.select("#shift");
+    var new_table3 = tableData.filter(info => info.shift===parseFloat(dateInputText.property("value")));
     displayData(new_table3);    
-    var dateInputText = d3.select("#country");    
-    var new_table4 = tableData.filter(info => info.country===parseFloat(dateInputText.property("value")));
+    var dateInputText = d3.select("#fcst_employee");    
+    var new_table4 = tableData.filter(info => info.fcst_employee===parseFloat(dateInputText.property("value")));
     displayData(new_table4);
-    var dateInputText = d3.select("#shape");
-    var new_table5 = tableData.filter(info => info.shape===parseFloat(dateInputText.property("value")));
+    var dateInputText = d3.select("#volumen");
+    var new_table5 = tableData.filter(info => info.volumen===parseFloat(dateInputText.property("value")));
     displayData(new_table5);
 });
 
