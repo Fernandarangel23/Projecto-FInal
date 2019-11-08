@@ -29,18 +29,18 @@ button.on("click", function() {
     tbody.text("")
     var dateInputText = d3.select("#datetime");
     var new_table1 = tableData.filter(info => moment(info.datetime).format('DD/MM/YYYY')===dateInputText.property("value"));
-    displayData(new_table1);
+    //displayData(new_table1);
     var dateInputText = d3.select("#branch");
-    var new_table2 = tableData.filter(info => info.branch===dateInputText.property("value"));  
-    displayData(new_table2);
+    var new_table2 = new_table1.filter(info => info.branch===dateInputText.property("value"));  
+    //displayData(new_table2);
     var dateInputText = d3.select("#shift");
-    var new_table3 = tableData.filter(info => info.shift===parseFloat(dateInputText.property("value")));
-    displayData(new_table3);    
+    var new_table3 = new_table2.filter(info => info.shift===parseFloat(dateInputText.property("value")));
+    //displayData(new_table3);    
     var dateInputText = d3.select("#fcst_employee");    
-    var new_table4 = tableData.filter(info => info.fcst_employee===parseFloat(dateInputText.property("value")));
-    displayData(new_table4);
+    var new_table4 = new_table3.filter(info => info.fcst_employee===parseFloat(dateInputText.property("value")));
+    //displayData(new_table4);
     var dateInputText = d3.select("#volumen");
-    var new_table5 = tableData.filter(info => info.volumen===parseFloat(dateInputText.property("value")));
+    var new_table5 = new_table4.filter(info => info.volumen===parseFloat(dateInputText.property("value")));
     displayData(new_table5);
 });
 
